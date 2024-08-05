@@ -58,13 +58,23 @@ export const tailwindColors: ColorObject = {
   "gradient-first": "#34eaa0",
   "gradient-second": "#0fa2e9",
 };
+
 const config: Config = {
   content: ["./src/app/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     colors: tailwindColors,
-    extend: {},
     container: {
       center: true,
+      padding: {
+        DEFAULT: "1rem",
+        lg: "3rem",
+        xl: "4rem",
+      },
+    },
+    extend: {
+      backgroundImage: {
+        "hero-pattern": "url('/images/tile.svg')",
+      },
     },
   },
   darkMode: "class",
